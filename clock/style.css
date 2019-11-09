@@ -1,0 +1,25 @@
+/*
+style.css
+for use with HTML clock
+Andy Felong
+08 Sep 2016
+*/
+
+body, div {
+	font-family: Verdana, Geneva, sans-serif; 
+	font-size: 320px;  /* adjust to preference and display size */
+	background-color: #000000;
+	color: #881200;  /* dim scarlet */
+}
+
+.timediv {
+	font-size: 100%; 
+	max-width: 1024px; /* use the width of the display */
+	text-align: center;
+}
+
+.tempdiv {
+	font-size: 60%;
+	max-width: 1024px; 
+	text-align: center; 
+}
