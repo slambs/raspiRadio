@@ -14,23 +14,27 @@ body, div {
 
 
 
-a {
+header, a {
+	padding-top: 50px;
 	text-align: center;
 	padding-left: 20px;
 	font-family: Verdana, Geneva, sans-serif; 
-	font-size: 80px;  /* adjust to preference and display size */
-	background-color: #000000;
+	font-size: 40px;  /* adjust to preference and display size */
 	color: #881200;  /* dim scarlet */	
 }
 
 .timediv {
-	font-size: 100%; 
-	max-width: 1024px; /* use the width of the display */
+	padding-top: 50px;
+	padding-left: 50px;
+	font-size: 60%; 
+	max-width: 400px; /* use the width of the display */
 	text-align: center;
 }
 
 .tempdiv {
-	font-size: 60%;
-	max-width: 1024px; 
+	font-size: 30%;
+	padding-left: 139px;
+	padding-top: 25px;
+	max-width: 400px; 
 	text-align: center; 
 }

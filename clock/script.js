@@ -31,12 +31,33 @@ function getTime() {
 // getTemp() - uses JQuery library to GET and parse JSON - included by index.html
 // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-function getTemp() {
-    // dummy variable
-    var theTemp = "25 " + "&#8451";
-    document.getElementById('temp_txt').innerHTML = theTemp; // update temperature div
-}
 
+    // var kelvin = fetchData();
+    // console.log(typeof kelvin);
+    // var celcius = kelvin - 273.15;
+    // // dummy variable
+    // var theTemp = celcius + "&#8451";
+    // document.getElementById('temp_txt').innerHTML = theTemp; // update temperature div
+
+
+
+
+function getTemp() {
+    jQuery(document).ready(function($) {
+        $.ajax({
+            url: WU_URL, // Weather Underground URL with key and location
+            dataType: "jsonp", // cross-domain JSON request
+            success: function(parsed_json) {
+                console.log(parsed_json.main.temp);
+                
+                var kelvin= parsed_json.main.temp;
+                var celcius = Math.round(kelvin - 273.15);
+                var theTemp = celcius + "&#8451";
+                document.getElementById('temp_txt').innerHTML = theTemp; // update temperature div
+            }
+        });
+    });
+}
 var tmp = setTimeout(getTemp, TEMP_CHECK_MINS);
 
 //################################### Weather
