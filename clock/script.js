@@ -28,18 +28,6 @@ function getTime() {
 }
 
 
-// getTemp() - uses JQuery library to GET and parse JSON - included by index.html
-// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-
-    // var kelvin = fetchData();
-    // console.log(typeof kelvin);
-    // var celcius = kelvin - 273.15;
-    // // dummy variable
-    // var theTemp = celcius + "&#8451";
-    // document.getElementById('temp_txt').innerHTML = theTemp; // update temperature div
-
-
 
 
 function getTemp() {

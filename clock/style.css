@@ -9,32 +9,50 @@ body, div {
 	font-family: Verdana, Geneva, sans-serif; 
 	font-size: 320px;  /* adjust to preference and display size */
 	background-color: #000000;
-	color: #881200;  /* dim scarlet */
+	color: #15f2fd;  /* dim scarlet */
 }
 
 
 
 header, a {
-	padding-top: 50px;
+	font-size: 66%;
+	padding-top: 30px;
+	margin-right: 70px;
+	margin-left: 10px;
 	text-align: center;
-	padding-left: 20px;
 	font-family: Verdana, Geneva, sans-serif; 
 	font-size: 40px;  /* adjust to preference and display size */
-	color: #881200;  /* dim scarlet */	
+	color: #15f2fd;  /* dim scarlet */	
+}
+
+p {
+	/*margin-left: 20px;*/
+	font-family: Verdana, Geneva, sans-serif; 
+	font-size: 20px;  /* adjust to preference and display size */
+	color: #15f2fd;  /* dim scarlet */	
 }
 
 .timediv {
 	padding-top: 50px;
-	padding-left: 50px;
-	font-size: 60%; 
+	margin-left: 170px;
+	font-size: 40%; 
 	max-width: 400px; /* use the width of the display */
 	text-align: center;
 }
 
 .tempdiv {
-	font-size: 30%;
-	padding-left: 139px;
+	font-size: 20%;
+	margin-left: 200px;
 	padding-top: 25px;
 	max-width: 400px; 
 	text-align: center; 
+}
+
+.sideMenTimeDiv{
+	padding-top: 50px;
+	padding-left: 50px;
+	font-size: 60%; 
+	max-width: 400px; /* use the width of the display */
+	text-align: center;
+
 }
