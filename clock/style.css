@@ -12,6 +12,17 @@ body, div {
 	color: #881200;  /* dim scarlet */
 }
 
+
+
+a {
+	text-align: center;
+	padding-left: 20px;
+	font-family: Verdana, Geneva, sans-serif; 
+	font-size: 80px;  /* adjust to preference and display size */
+	background-color: #000000;
+	color: #881200;  /* dim scarlet */	
+}
+
 .timediv {
 	font-size: 100%; 
 	max-width: 1024px; /* use the width of the display */
