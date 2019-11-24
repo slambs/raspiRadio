@@ -42,21 +42,14 @@ function getTemp() {
                 var celcius = Math.round(kelvin - 273.15);
                 var theTemp = celcius + "&#8451";
                 document.getElementById('temp_txt').innerHTML = theTemp; // update temperature div
+                var tmp = setTimeout(getTemp, TEMP_CHECK_MINS);
             }
         });
     });
 }
-var tmp = setTimeout(getTemp, TEMP_CHECK_MINS);
+;
 
-//################################### Weather
-// Innsbruck{
-//     "id": 6949518,
-//     "name": "Innsbruck (Innenstadt)",
-//     "country": "AT",
-//     "coord": {
-//       "lon": 11.3928,
-//       "lat": 47.2672
-//     }
+
 
 // Example Call : http://api.openweathermap.org/data/2.5/forecast?id=6949518&APPID={APIKEY}
 //https://api.openweathermap.org/data/2.5/weather?id=6949518&appid=a2ff0a2999da9e41d1c0a3e125807cb1
