@@ -21,6 +21,12 @@ __Install and run server__
 Depending on the config file, the programm should run at localhost:8760 or "yourRaspi'sIP":8760
 you can see the time from there, change the stations or set the alarm.
 
+on the raspberry pi open the autostart document with the editor of your choice.
+* sudo vim /home/pi/.config/lxsession/LXDE-pi/autostart
+
+enter the following:
+
+
 __Resources__
 
 Links of Projects that inpired me / gave me ideas / helped me get the project done.

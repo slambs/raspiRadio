@@ -7,12 +7,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
-<!-- top buttons  -->
-<header>
-    <a href="index.html">clock</a>
-    <a href="alarm.html">alarm</a>
-    <a href="radio.html">radio</a>
-</header>
+<body onload="getTime(); getTemp()"> 
+
+    <header>
+        <a href="index.html">clock</a>
+        <a href="radio.html">radio</a>
+        <a href="alarm.html">alarm</a>
+        <p><div id="time_txt" class="timediv"></div</p>
+    </header>
 
 <!-- Display Clock -->
 <p>Set Alarm</p>

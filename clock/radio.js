@@ -10,7 +10,7 @@
 
 // Cache references to DOM elements.
 var elms = ['station0', 'title0', 'live0', 'playing0', 'station1', 'title1', 'live1', 'playing1', 'station2', 'title2', 'live2', 'playing2', 'station3', 'title3', 'live3', 'playing3', 'station4', 'title4', 'live4', 'playing4'];
-elms.forEach(function(elm) {
+elms.forEach(function (elm) {
   window[elm] = document.getElementById(elm);
 });
 
@@ -19,18 +19,18 @@ elms.forEach(function(elm) {
  * Includes all methods for playing, stopping, etc.
  * @param {Array} stations Array of objects with station details ({title, src, howl, ...}).
  */
-var Radio = function(stations) {
+var Radio = function (stations) {
   var self = this;
 
   self.stations = stations;
   self.index = 0;
-  
+
   // Setup the display for each station.
-  for (var i=0; i<self.stations.length; i++) {
+  for (var i = 0; i < self.stations.length; i++) {
     window['title' + i].innerHTML = '<b>' + self.stations[i].freq + '</b> ' + self.stations[i].title;
-    window['station' + i].addEventListener('click', function(index) {
+    window['station' + i].addEventListener('click', function (index) {
       var isNotPlaying = (self.stations[index].howl && !self.stations[index].howl.playing());
-      
+
       // Stop other sounds or the current one.
       radio.stop();
 
@@ -46,7 +46,7 @@ Radio.prototype = {
    * Play a station with a specific index.
    * @param  {Number} index Index in the array of stations.
    */
-  play: function(index) {
+  play: function (index) {
     var self = this;
     var sound;
 
@@ -78,7 +78,7 @@ Radio.prototype = {
   /**
    * Stop a station's live stream.
    */
-  stop: function() {
+  stop: function () {
     var self = this;
 
     // Get the Howl we want to manipulate.
@@ -98,7 +98,7 @@ Radio.prototype = {
    * @param  {Number} index Index of the station to toggle.
    * @param  {Boolean} state true is on and false is off.
    */
-  toggleStationDisplay: function(index, state) {
+  toggleStationDisplay: function (index, state) {
     var self = this;
 
     // Highlight/un-highlight the row.
