@@ -115,21 +115,27 @@ Radio.prototype = {
 // Setup our new radio and pass in the stations.
 var radio = new Radio([
   {
-    freq: '11.1',
+    freq: '1',
     title: "BBC Radio 1",
     src: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_q',
     howl: null
   },
   {
-    freq: '22.2',
+    freq: '2',
     title: "Oldies",
     src: 'http://swingfm.ice.infomaniak.ch/swingfm-128.mp3',
     howl: null
   },
   {
-    freq: '33.3',
-    title: "Coming",
-    src: 'http://rfcmedia.streamguys1.com/MusicPulse.mp3',
+    freq: '3',
+    title: "Radio Neptune",
+    src: 'http://icecast.infini.fr:8000/neptune',
+    howl: null
+  },
+  {
+    freq: '4',
+    title: "Jazz & Funk",
+    src: 'https://vip2.fastcast4u.com/proxy/sjtbhd?mp=/1',
     howl: null
   }
 ]);

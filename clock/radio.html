@@ -1,38 +1,22 @@
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Radio</title>
-    <script src="./jquery/jquery.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="./radioStyles.css">
-</head>
-
-<body>
-    
-    <header>
-        <a href="index.html">start</a>
-        <a href="alarm.html">alarm</a>
-        <a href="radio.html">radio</a>
-    </header> -->
-
-
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no">
-    <title>Howler.js Radio</title>
+    <title>Radio</title>
     <link rel="stylesheet" href="./radioStyles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="getTime(); getTemp()"> 
 
     <header>
-        <a href="index.html">start</a>
+        <a href="index.html">clock</a>
         <a href="alarm.html">alarm</a>
         <a href="radio.html">radio</a>
+        <p><div id="time_txt" class="timediv"></div</p>
     </header>
 
     <!-- Stations -->

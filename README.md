@@ -12,7 +12,14 @@ __Software__
 
 *...
 
-__Installation__
+__Install and run server__
+
+* cd /clock 
+* npm install
+* node clock.js
+
+Depending on the config file, the programm should run at localhost:8760 or "yourRaspi'sIP":8760
+you can see the time from there, change the stations or set the alarm.
 
 __Resources__
 
