@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Orbitron;
+    src: url(./fonts/Orbitron-Medium.ttf);
+}
+
+.indexButton > a {
+    font-family: Orbitron;
+    color: tomato;
+    margin-left: 10%;
+    border: solid tomato 5px;
+}
+
+.radioButton > a{
+    font-family: Orbitron;
+    color: tomato;
+    margin-left: 10%;
+    border: solid tomato 5px;
+}
+
+.alarmButton > a {
+    font-family: Orbitron;
+    color: tomato;
+    margin-left: 10%;
+    border: solid tomato 5px;
+}
+
+.item4 {
+    font-family: Orbitron;
+    grid-row: 2 / 4;
+}
+
+.item5 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+.container {
+    font-size: 40px;
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.timediv {
+    color: tomato;
+    font-family: Orbitron;
+    padding: 5px;
+}
+
+body{
+    background:black;
+}
