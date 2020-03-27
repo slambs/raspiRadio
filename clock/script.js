@@ -26,6 +26,7 @@ function getTime() {
     }
     document.getElementById('time_txt').innerHTML = hrs + ":" + mins; // update time div
     var t = setTimeout(getTime, CLOCK_CHECK_SECS);
+    return hrs + ":" + mins; 
 }
 
 
@@ -43,13 +44,18 @@ function getTemp() {
                 var kelvin= parsed_json.main.temp;
                 var celcius = Math.round(kelvin - 273.15);
                 var theTemp = celcius + "&#8451";
-                document.getElementById('temp_txt').innerHTML = CityName + " " +theTemp; // update temperature div
+                document.getElementById('temp_txt').innerHTML = CityName + " : " +theTemp; // update temperature div
                 var tmp = setTimeout(getTemp, TEMP_CHECK_MINS);
             }
         });
     });
-}
-;
+};
 
+
+function timeSnap(){
+    var time = getTime();
+    console.log(time);
+    document.getElementById('timeFreeze').innerText = time;
+}
 // city id can be found here : http://bulk.openweathermap.org/sample/
 

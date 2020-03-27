@@ -13,18 +13,23 @@ Andy Felong
 
 
 h1#time_txt {
-	color: blanchedalmond;
+	color: rgb(207, 34, 63);
 	font-size: 5.5rem;
     font-family: Orbitron;
 	text-align: center;
-	
+	display: -ms-inline-flexbox;
 }
 h1#temp_txt {
-	color: burlywood;
-	font-size: 50px;
+	color: rgb(223, 64, 37);
+	font-size: 3.5rem;
     font-family: Orbitron;
 	text-align: center;
 }
+a#timeFreeze{
+	border: 10px solid orangered;
+	color: orangered;
+}
+
 input {
 	font-family: Orbitron;
 	width:20%;
