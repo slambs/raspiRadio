@@ -9,86 +9,75 @@ Andy Felong
 	font-family: Orbitron;
 	src: url(./fonts/Orbitron-Medium.ttf);
 }
-
-
-
 h1#time_txt {
-	color: rgb(207, 34, 63);
-	font-size: 5.5rem;
-    font-family: Orbitron;
+	color: rgb(32, 202, 202);
+	font-size: 7.0rem;
+	font-family: 'Helvetica';
 	text-align: center;
-	display: -ms-inline-flexbox;
 }
 h1#temp_txt {
-	color: rgb(223, 64, 37);
-	font-size: 3.5rem;
-    font-family: Orbitron;
+	color:rgb(33, 214, 214);
+	font-size: 1.0rem;
+    font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 }
 a#timeFreeze{
-	border: 10px solid orangered;
-	color: orangered;
-}
-
-input {
-	font-family: Orbitron;
-	width:20%;
-	font-size: 80px;
-	color:black;
+	font-family: Helvetica;
+	border: 10px solid rgb(0, 225, 255);
+	color: rgb(49, 138, 197);
 }
 
 
 
-html {
-	font-family: Orbitron;
-	width: 100%;
-	height: 100%;  
-	padding: 0;
-	margin: 0;
-	outline: 0;
-	
-  }
-  
-  body {
-	
+html, body {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+	right:0;
 	background: black;
-	-webkit-user-select: none;
-	user-select: none;
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	border: 3px solid tomato;
-  }
+	border: 3px solid rgb(49, 138, 197);
+}
+header, a {
+	font-size: 42px;
+	margin-top: 2rem;
+	text-align: center;
+	font-family: Orbitron;
+	color: rgb(49, 138, 197);
+}
+
+select {
+	align-self: center;
+	font-size: 42px;
+	margin-top: 2rem;
+	text-align: center;
+	font-family: Orbitron;
+	color: rgb(49, 138, 197);
+}
+
   
   /* Stations */
   .padding {
 	width: 90%;
-	height: 12.5%;
+	height: 2%;
   }
   .station {
 	position: relative;
-	width: 100%;
+	width: 90%;
 	height: 15%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	-webkit-box-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: center;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	padding-left: 5%;
 	cursor: pointer;
-	box-sizing: border-box;
+	margin:0px;
   }
   .station:hover {
 	background-color: rgba(255, 255, 255, 0.1);
   }
   .title {
-	font-size: 4vw;
-	line-height: 4vw;
+	font-size: 2vw;
+	line-height: 2vw;
 	font-weight: 300;
 	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
@@ -183,15 +172,5 @@ html {
 	  transform: scaleY(1);
 	}
   }
-  header, a {
-	  font-size: 42px;
-	  margin: 2rem;
-	  text-align: center;
-	  font-family: Orbitron;
-	  color: #cc1919;
-  }
 
-  .freezeTime {
-	  color: aqua;
-	  size 20px;
-  }
+  
