@@ -115,35 +115,54 @@ Radio.prototype = {
 // Setup our new radio and pass in the stations.
 var radio = new Radio([
   {
-    freq: '1',
+    freq: '1.',
     title: "Galaxy 92",
     src: 'http://galaxy.live24.gr:80/galaxy9292',
     howl: null
   },
   {
-    freq: '2',
+    freq: '2.',
     title: "Radio Neptune",
     src: 'http://icecast.infini.fr:8000/neptune',
     howl: null
   },
   {
-    freq: '3',
+    freq: '3.',
     title: "Oldies",
     src: 'http://swingfm.ice.infomaniak.ch/swingfm-128.mp3',
     howl: null
   },
   
   {
-    freq: '4',
+    freq: '4.',
     title: "Jazz & Funk",
     src: 'https://vip2.fastcast4u.com/proxy/sjtbhd?mp=/1',
     howl: null
   },
   {
-    freq: '5',
+    freq: '5.',
     title: "Red 96.3",
     src: 'http://stream.radiojar.com:80/redfm963',
     howl: null
   },
+  {
+    freq: '6.',
+    title: "50s Kypros",
+    src: 'http://listen.radionomy.com:80/50salltimegreatest',
+    howl: null
+  },
+  {
+    freq: '7.',
+    title: "93.0 Kosmos",
+    src: 'http://cast5.magicstreams.gr:8132/',
+    howl: null
+  },
+  {
+    freq: '8.',
+    title: "Oktava radio",
+    src: 'http://95.216.189.65:8000/media',
+    howl: null
+  },
+ 
 ]);
 

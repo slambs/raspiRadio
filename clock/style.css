@@ -14,18 +14,24 @@ Andy Felong
 
 h1#time_txt {
 	color: tomato;
-	font-size: 80px;
+	font-size: 6rem;
     font-family: Orbitron;
 	margin-left: 200px;
 	
 }
 h1#temp_txt {
 	color: tomato;
-	font-size: 60px;
+	font-size: 50px;
 	margin-left: 200px;
     font-family: Orbitron;
 	left: 100px;
 	
+}
+input {
+	font-family: Orbitron;
+	width:20%;
+	font-size: 80px;
+	color:black;
 }
 
 
@@ -49,7 +55,7 @@ html {
   
   /* Stations */
   .padding {
-	width: 100%;
+	width: 90%;
 	height: 12.5%;
   }
   .station {
@@ -174,7 +180,7 @@ html {
   }
   
   header, a {
-	  font-size: 40px;
+	  font-size: 38px;
 	  padding-top: 30px;
 	  margin-right: 70px;
 	  margin-left: 10px;
