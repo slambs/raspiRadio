@@ -64,22 +64,23 @@ select {
   .station {
 	position: relative;
 	width: 90%;
-	height: 15%;
+	height: 8%;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	padding-left: 5%;
 	cursor: pointer;
 	margin:0px;
+	font-size: 3rem;
   }
   .station:hover {
 	background-color: rgba(255, 255, 255, 0.1);
   }
   .title {
-	font-size: 2vw;
+	font-size: 2rem;
 	line-height: 2vw;
 	font-weight: 300;
-	color: #fff;
+	color: rgb(127, 186, 224);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
   }
   .subtitle {
