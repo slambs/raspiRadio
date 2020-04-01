@@ -59,3 +59,9 @@ function timeSnap(){
 }
 // city id can be found here : http://bulk.openweathermap.org/sample/
 
+function setBrightness(){
+    var backlight = require('./node_modules/rpi-backlight');
+    var currentValue = document.getElementById('myRange').value;
+    console.log(currentValue);
+    backlight.setBrightness(currentValue);
+}
