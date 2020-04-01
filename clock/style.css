@@ -24,8 +24,9 @@ h1#temp_txt {
 }
 a#timeFreeze{
 	font-family: Helvetica;
-	color: rgb(49, 138, 197);
-	border: 4px solid rgb(49, 138, 197);
+	font-size: 4.5rem;
+	color: rgb(65, 138, 197);
+	border: 5px solid rgb(49, 138, 197);
 }
 
 
