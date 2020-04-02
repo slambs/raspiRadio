@@ -63,6 +63,13 @@ header, a {
 	font-family: Orbitron;
 	color: rgb(49, 138, 197);
 }
+footer,a#bright1{
+	font-size: 19px;
+	font-family: Orbitron;
+	color: rgb(49, 138, 197);
+	text-align: center;
+	margin: 20px;
+}
 
 select {
 	align-self: center;
