@@ -37,7 +37,8 @@ a#timeFreeze{
 	-webkit-appearance: none;
 	height: 25px;
 	background: black;
-	border:5px solid rgb(49, 138, 197) 
+	border:5px solid rgb(49, 138, 197) ;
+	opacity:0.5;
   }
   
   .slider::-moz-range-thumb {
