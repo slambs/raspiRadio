@@ -8,12 +8,12 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="getTime(); getTemp()">
+<body onload="getTime(); getTemp(); document.getElementById('timeFreeze').innerText = localStorage.getItem('timeStopValue');">
     <!-- top buttons  -->
     <header>
         <a href="index.html">clock</a>
         <a href="radio.html">radio</a>
-        <a id="timeFreeze" onclick="timeSnap();">00:00</a>
+        <a id="timeFreeze" onclick="timeSnap();">xx:xx</a>
     </header>
     <!-- Display Clock -->
     <h1 id="time_txt"></h1>

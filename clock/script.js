@@ -6,7 +6,6 @@ Andy Felong
 */
 
 // Ids --> ibk = 6949518// schlitters;
-
 // can't use "const" in IE -- so use "var"
 var CLOCK_CHECK_SECS = 20 * 1000; // 20 seconds
 var TEMP_CHECK_MINS = 10 * 60000; // 10 minutes
@@ -53,9 +52,10 @@ function getTemp() {
 
 
 function timeSnap(){
-    var time = getTime();
-    console.log(time);
-    document.getElementById('timeFreeze').innerText = time;
+    var timeStopValue = getTime();
+    console.log(timeStopValue);
+    document.getElementById('timeFreeze').innerText = timeStopValue;
+    localStorage.setItem('timeStopValue',timeStopValue);
 }
 // city id can be found here : http://bulk.openweathermap.org/sample/
 
