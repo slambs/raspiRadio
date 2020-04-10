@@ -50,7 +50,6 @@ function getTemp() {
     });
 };
 
-
 function timeSnap(){
     var timeStopValue = getTime();
     console.log(timeStopValue);
@@ -64,4 +63,16 @@ function setBrightnesV(){
     var currentValue = document.getElementById('myRange').value;
     console.log(currentValue);
     backlight.setBrightness(currentValue);
+}
+
+function insideTempAndMoist(){
+    var sensor = require('node-dht-sensor');
+    sensor.read(11, 4, function(err, temperature, humidity) {
+        if (!err) {
+        var message = `temp: ${temperature}°C, humidity: ${humidity}%`;
+          console.log(message);
+          document.getElementById('tempNmoistIn').innerText = message;
+          setTimeout(insideTempAndMoist,30000);
+        }
+      });
 }
