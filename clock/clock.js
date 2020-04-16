@@ -24,6 +24,10 @@ app.get( '/',(req,res) =>{
     res.status(200).sendFile(path.join(__dirname)); 
 });
 
+app.get ('/tempIn',(res, req)=>{
+    res.send('temp and hum inside '+stdout+'<br><a href="/">Back to home page</a>')
+})
+
 // The screen goes Off at <= 9 brightness value
 app.get('/setBrightness/:value', (req, res) => {
     backlight.setBrightness(req.params.value).then(() => {
