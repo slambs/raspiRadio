@@ -1,0 +1,1 @@
+temp: 25°C, humidity: 28%

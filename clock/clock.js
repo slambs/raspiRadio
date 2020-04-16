@@ -2,12 +2,23 @@ const express = require('express');
 const path = require('path');
 const backlight = require('rpi-backlight');
 
+const { exec } = require('child_process');
+
+exec('node measureTemp.js>tempIn.txt', (err, stdout, stderr) => {
+	if(err){
+		console.error(err);
+	} else {
+	console.log(`stdout: ${stdout}`);
+	}
+});
+
 
 app = express();
 port = 8760;
 
 app.use(express.static(__dirname ));
 app.use(express.static('node_modules'));
+
 
 app.get( '/',(req,res) =>{
     res.status(200).sendFile(path.join(__dirname)); 
@@ -30,7 +41,14 @@ app.get('/setBrightness/:value', (req, res) => {
     });
 });
 
-
 app.listen(port, ()=>{
     console.log(`Port runnuning at port ${port}`);
+    console.log(stdout);
 });
+
+// write values of temp sensor to a tempIn.txt file every
+var timeInterval = 60000;
+
+setTimeout(function(){
+
+},timeInterval);
