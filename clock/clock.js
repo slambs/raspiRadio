@@ -4,13 +4,6 @@ const backlight = require('rpi-backlight');
 
 const { exec } = require('child_process');
 
-exec('node measureTemp.js>tempIn.txt', (err, stdout, stderr) => {
-	if(err){
-		console.error(err);
-	} else {
-	console.log(`stdout: ${stdout}`);
-	}
-});
 
 
 app = express();
@@ -24,9 +17,7 @@ app.get( '/',(req,res) =>{
     res.status(200).sendFile(path.join(__dirname)); 
 });
 
-app.get ('/tempIn',(res, req)=>{
-    res.send('temp and hum inside '+stdout+'<br><a href="/">Back to home page</a>')
-})
+
 
 // The screen goes Off at <= 9 brightness value
 app.get('/setBrightness/:value', (req, res) => {
