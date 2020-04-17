@@ -28,6 +28,12 @@ a#timeFreeze{
 	color: rgb(238, 121, 12);
 	border: 5px solid rgb(238, 121, 12);
 }
+iframe{
+	font-family: Helvetica;
+	font-size: 1rem;
+	color: rgb(238, 121, 12);
+	background-color: #fff;
+}
 .slidecontainer {
 	align-self: center;
 	width: 16%;
