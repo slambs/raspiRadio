@@ -1,8 +1,17 @@
 const express = require('express');
 const path = require('path');
 const backlight = require('rpi-backlight');
-//const { exec } = require('child_process');
+const { exec } = require('child_process');
 
+function writeToFile() {
+    exec('node measureTemp.js > tempIn.txt', (err, stdout, stderr) => {
+        if(err){
+            console.error(err);
+        } else {
+        console.log('temp written to file');
+        }
+    });
+}
 
 
 app = express();
