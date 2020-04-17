@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const backlight = require('rpi-backlight');
-const { exec } = require('child_process');
+//const { exec } = require('child_process');
 
 
 
@@ -41,8 +41,4 @@ app.listen(port, ()=>{
 });
 
 // write values of temp sensor to a tempIn.txt file every
-var timeInterval = 60000;
 
-setTimeout(function(){
-
-},timeInterval);
