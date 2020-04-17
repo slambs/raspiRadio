@@ -12,7 +12,7 @@ function writeToFile() {
         }
     });
 }
-
+setTimeout(writeToFile(),60000);
 
 app = express();
 port = 8760;
