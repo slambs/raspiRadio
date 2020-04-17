@@ -37,7 +37,6 @@ app.get('/setBrightness/:value', (req, res) => {
 
 app.listen(port, ()=>{
     console.log(`Port runnuning at port ${port}`);
-    console.log(stdout);
 });
 
 // write values of temp sensor to a tempIn.txt file every
