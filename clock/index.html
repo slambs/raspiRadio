@@ -8,7 +8,7 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="getTime(); getTemp(); document.getElementById('timeFreeze').innerText = localStorage.getItem('timeStopValue');">
+<body onload="getTime(); getTemp(); insideTempAndMoist();document.getElementById('timeFreeze').innerText = localStorage.getItem('timeStopValue');">
     <!-- top buttons  -->
     <header>
         <a href="index.html">clock</a>
@@ -18,7 +18,9 @@
     <!-- Display Clock -->
     <h1 id="time_txt"></h1>
     <h1 id="temp_txt"></h1>
+    <h1 id="temp_in"></h1>
 <footer>
+
     <a id="bright1" href="/setBrightness/10">min Bright</a>
     <a id="bright1" href="/setBrightness/100">Bright</a>
     <a id="bright1" href="/setBrightness/200">max Bright</a>

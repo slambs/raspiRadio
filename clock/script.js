@@ -25,43 +25,44 @@ function getTime() {
     }
     document.getElementById('time_txt').innerHTML = hrs + ":" + mins; // update time div
     var t = setTimeout(getTime, CLOCK_CHECK_SECS);
-    return hrs + ":" + mins; 
+    return hrs + ":" + mins;
 }
 
 
 
 
 function getTemp() {
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
         $.ajax({
             url: WU_URL, // Weather Underground URL with key and location
             dataType: "jsonp", // cross-domain JSON request
-            success: function(parsed_json) {
+            success: function (parsed_json) {
                 console.log(parsed_json.main.temp);
                 console.log(parsed_json.name);
                 var CityName = parsed_json.name;
-                var kelvin= parsed_json.main.temp;
+                var kelvin = parsed_json.main.temp;
                 var celcius = Math.round(kelvin - 273.15);
                 var theTemp = celcius + "&#8451";
-                document.getElementById('temp_txt').innerHTML = CityName + " : " +theTemp; // update temperature div
+                document.getElementById('temp_txt').innerHTML = CityName + " : " + theTemp; // update temperature div
                 var tmp = setTimeout(getTemp, TEMP_CHECK_MINS);
             }
         });
     });
 };
 
-
-function timeSnap(){
+function timeSnap() {
     var timeStopValue = getTime();
     console.log(timeStopValue);
     document.getElementById('timeFreeze').innerText = timeStopValue;
-    localStorage.setItem('timeStopValue',timeStopValue);
+    localStorage.setItem('timeStopValue', timeStopValue);
 }
 // city id can be found here : http://bulk.openweathermap.org/sample/
 
-function setBrightnesV(){
-    var backlight = require('./node_modules/rpi-backlight');
-    var currentValue = document.getElementById('myRange').value;
-    console.log(currentValue);
-    backlight.setBrightness(currentValue);
+function insideTempAndMoist() {
+    jQuery.get('tempIn.txt', function(data) {
+        console.log(data);//process text file line by line
+        document.getElementById('temp_in').innerText = data
+     });
+     
+    setTimeout(insideTempAndMoist,10000);
 }

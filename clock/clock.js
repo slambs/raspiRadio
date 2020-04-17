@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const backlight = require('rpi-backlight');
+const { exec } = require('child_process');
+
 
 
 app = express();
@@ -9,9 +11,12 @@ port = 8760;
 app.use(express.static(__dirname ));
 app.use(express.static('node_modules'));
 
+
 app.get( '/',(req,res) =>{
     res.status(200).sendFile(path.join(__dirname)); 
 });
+
+
 
 // The screen goes Off at <= 9 brightness value
 app.get('/setBrightness/:value', (req, res) => {
@@ -30,7 +35,14 @@ app.get('/setBrightness/:value', (req, res) => {
     });
 });
 
-
 app.listen(port, ()=>{
     console.log(`Port runnuning at port ${port}`);
+    console.log(stdout);
 });
+
+// write values of temp sensor to a tempIn.txt file every
+var timeInterval = 60000;
+
+setTimeout(function(){
+
+},timeInterval);
