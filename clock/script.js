@@ -61,8 +61,8 @@ function timeSnap() {
 function insideTempAndMoist() {
     jQuery.get('tempIn.txt', function(data) {
         console.log(data);//process text file line by line
-        document.getElementById('temp_in').innerText = data
+        document.getElementById('temp_in').innerText = data;
      });
      
-    setTimeout(insideTempAndMoist,10000);
+    setTimeout(insideTempAndMoist,20000);
 }

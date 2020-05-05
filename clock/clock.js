@@ -1,18 +1,7 @@
 const express = require('express');
 const path = require('path');
 const backlight = require('rpi-backlight');
-const { exec } = require('child_process');
 
-function writeToFile() {
-    exec('node measureTemp.js > tempIn.txt', (err, stdout, stderr) => {
-        if(err){
-            console.error(err);
-        } else {
-        console.log('temp written to file');
-        }
-    });
-}
-setTimeout(writeToFile(),60000);
 
 app = express();
 port = 8760;
@@ -48,5 +37,4 @@ app.listen(port, ()=>{
     console.log(`Port runnuning at port ${port}`);
 });
 
-// write values of temp sensor to a tempIn.txt file every
 

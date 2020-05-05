@@ -11,7 +11,7 @@ Andy Felong
 }
 h1#time_txt {
 	color: rgb(238, 121, 12); 
-	font-size: 10.1rem;
+	font-size: 11.1rem;
 	font-family: 'Helvetica';
 	text-align: center;
 	margin: 0.5rem 0.5rem 0 0
@@ -35,12 +35,7 @@ a#timeFreeze{
 	color: rgb(238, 121, 12);
 	border: 5px solid rgb(238, 121, 12);
 }
-iframe{
-	font-family: Helvetica;
-	font-size: 1rem;
-	color: rgb(238, 121, 12);
-	background-color: #fff;
-}
+
 .slidecontainer {
 	align-self: center;
 	width: 16%;

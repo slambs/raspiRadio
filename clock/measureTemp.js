@@ -1,7 +1,7 @@
 var sensor = require("node-dht-sensor");
 
-sensor.read(11, 4, function(err, temperature, humidity) {
+sensor.read(22, 4, function(err, temperature, humidity) {
   if (!err) {
-    console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
+    console.log(`temp: ${temperature.toFixed(2)}°C, humidity: ${humidity.toFixed(2)}%`);
   }
 });
