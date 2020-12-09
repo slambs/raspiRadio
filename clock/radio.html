@@ -10,7 +10,7 @@
     <script src="./script.js"></script>
 </head>
 
-<body onload="getTime()">
+<body onload="getTime(); insideTempAndMoist();">
 
     <header>
         <a href="index.html">clock</a>
@@ -62,7 +62,6 @@
         </div>
     </div>
 
-
     <div id="station3" class="station">
         <div class="title">
             <div id="title3" class="subtitle"></div>
@@ -76,6 +75,7 @@
             </div>
         </div>
     </div>
+
     <div id="station4" class="station">
         <div class="title">
             <div id="title4" class="subtitle"></div>
@@ -132,6 +132,21 @@
     </div>
 
 
+    <div id="station8" class="station">
+        <div class="title">
+            <div id="title8" class="subtitle"></div>
+            <div id="live8" class="live">LIVE</div>
+            <div id="playing8" class="playing">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="padding"></div>
     <div class="padding"></div>
@@ -146,9 +161,12 @@
                 <div class="rect4"></div>
                 <div class="rect5"></div>
             </div>
+            <h1 id="temp_in"></h1>
         </div>
     </div>
     <div class="padding"></div>
+
+    
 
     <!-- Scripts -->
     <script src="./node_modules/howler/src/howler.core.js"></script>

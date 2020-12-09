@@ -1,9 +1,3 @@
-/*
-script.js
-for use with HTML clock
-Andy Felong
-09 Sep 2016
-*/
 
 // Ids --> ibk = 6949518// schlitters;
 // can't use "const" in IE -- so use "var"

@@ -1,15 +1,10 @@
-/*!
- *  Howler.js Radio Demo
- *  howlerjs.com
- *
- *  (c) 2013-2019, James Simpson of GoldFire Studios
- *  goldfirestudios.com
- *
- *  MIT License
- */
 
 // Cache references to DOM elements.
-var elms = ['station0', 'title0', 'live0', 'playing0', 'station1', 'title1', 'live1', 'playing1', 'station2', 'title2', 'live2', 'playing2', 'station3', 'title3', 'live3', 'playing3', 'station4', 'title4', 'live4', 'playing4'];
+var elms = ['station0', 'title0', 'live0', 'playing0', 
+            'station1', 'title1', 'live1', 'playing1', 
+            'station2', 'title2', 'live2', 'playing2', 
+            'station3', 'title3', 'live3', 'playing3', 
+            'station4', 'title4', 'live4', 'playing4'];
 elms.forEach(function (elm) {
   window[elm] = document.getElementById(elm);
 });
@@ -19,9 +14,9 @@ elms.forEach(function (elm) {
  * Includes all methods for playing, stopping, etc.
  * @param {Array} stations Array of objects with station details ({title, src, howl, ...}).
  */
+
 var Radio = function (stations) {
   var self = this;
-
   self.stations = stations;
   self.index = 0;
 
@@ -41,6 +36,7 @@ var Radio = function (stations) {
     }.bind(self, i));
   }
 };
+
 Radio.prototype = {
   /**
    * Play a station with a specific index.
@@ -75,9 +71,6 @@ Radio.prototype = {
     self.index = index;
   },
 
-  /**
-   * Stop a station's live stream.
-   */
   stop: function () {
     var self = this;
 
@@ -153,14 +146,20 @@ var radio = new Radio([
   },
   {
     freq: '7.',
-    title: "93.0 Kosmos",
-    src: 'http://cast5.magicstreams.gr:8132/',
+    title: "Skai",
+    src: 'https://skai.live24.gr/skai1003',
     howl: null
   },
   {
     freq: '8.',
     title: "Oktava radio",
     src: 'http://95.216.189.65:8000/media',
+    howl: null
+  },
+  {
+    freq: '9.',
+    title: "Kids radio",
+    src: 'https://stream.radiojar.com/64p6ktzntg0uv',
     howl: null
   },
  
