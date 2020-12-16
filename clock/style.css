@@ -1,210 +1,225 @@
-/*
-style.css
-for use with HTML clock
-Andy Felong
-08 Sep 2016
-*/
-
 @font-face {
-	font-family: Orbitron;
-	src: url(./fonts/Orbitron-Medium.ttf);
-}
-h1#time_txt {
-	color: rgb(238, 121, 12); 
-	font-size: 11.1rem;
-	font-family: 'Helvetica';
-	text-align: center;
-	margin: 0.5rem 0.5rem 0 0
-}
-h1#temp_txt {
-	color:rgb(238, 121, 12); 
-	font-size: 2.0rem;
-    font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-}
-h1#temp_in {
-	color:rgb(238, 121, 12); 
-	font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
+    font-family: Orbitron;
+    src: url(./fonts/Orbitron-Medium.ttf);
 }
 
-a#timeFreeze{
-	font-family: Helvetica;
-	font-size: 4.3rem;
-	color: rgb(238, 121, 12);
-	border: 5px solid rgb(238, 121, 12);
+h1#time_txt {
+    color: rgb(238, 121, 12);
+    font-size: 11.1rem;
+    font-family: 'Helvetica';
+    text-align: center;
+    margin: 0.5rem 0.5rem 0 0
+}
+
+h1#temp_txt {
+    color: rgb(238, 121, 12);
+    font-size: 2.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1#temp_in {
+    color: rgb(238, 121, 12);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a#timeFreeze {
+    font-family: Helvetica;
+    font-size: 4.3rem;
+    color: rgb(238, 121, 12);
+    border: 5px solid rgb(238, 121, 12);
 }
 
 .slidecontainer {
-	align-self: center;
-	width: 16%;
-	border:5px solid rgb(238, 121, 12); 
+    align-self: center;
+    width: 16%;
+    border: 5px solid rgb(238, 121, 12);
 }
-.slider {
-	-webkit-appearance: none;
-	height: 25px;
-	background: black;
-	border:5px solid rgb(238, 121, 12);
-	opacity:0.5;
-  }
-  
-  .slider::-moz-range-thumb {
-	width: 25px;
-	height: 25px;
-	background: #4CAF50;
-	cursor: pointer;
-  }
 
-html, body {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-	right:0;
-	background: black;
+.slider {
+    -webkit-appearance: none;
+    height: 25px;
+    background: black;
+    border: 5px solid rgb(238, 121, 12);
+    opacity: 0.5;
 }
-header, a {
-	font-size: 39px;
-	margin-top: 0.5rem;
-	text-align: center;
-	font-family: Orbitron;
-	color: rgb(238, 121, 12);
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
 }
-footer,a#bright1{
-	font-size: 19px;
-	font-family: Orbitron;
-	color: rgb(238, 121, 12);
-	text-align: center;
-	margin: 20px;
+
+html,
+body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+}
+
+header,
+a {
+    font-size: 39px;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: Orbitron;
+    color: rgb(238, 121, 12);
+}
+
+footer,
+a#bright1 {
+    font-size: 19px;
+    font-family: Orbitron;
+    color: rgb(238, 121, 12);
+    text-align: center;
+    margin: 20px;
 }
 
 select {
-	align-self: center;
-	font-size: 42px;
-	margin-top: 2rem;
-	text-align: center;
-	font-family: Orbitron;
-	color: rgb(49, 138, 197);
+    align-self: center;
+    font-size: 42px;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: Orbitron;
+    color: rgb(49, 138, 197);
 }
 
-  
-  /* Stations */
-  .padding {
-	width: 90%;
-	height: 2%;
-  }
-  .station {
-	position: relative;
-	width: 90%;
-	height: 8%;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	padding-left: 5%;
-	cursor: pointer;
-	margin:0px;
-	font-size: 3rem;
-  }
-  .station:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-  }
-  .title {
-	font-size: 2rem;
-	line-height: 2vw;
-	font-weight: 300;
-	color: rgb(127, 186, 224);
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-  .subtitle {
-	display: inline-block;
-	vertical-align: middle;
-  }
-  .live {
-	width: 8vw;
-	height: 3vw;
-	background-color: #cc1919;
-	border-radius: 3px;
-	font-weight: bold;
-	color: #fff;
-	font-size: 2.25vw;
-	line-height: 3vw;
-	display: inline-block;
-	text-align: center;
-	opacity: 0;
-	text-shadow: none;
-  }
-  
-  /* Playing Animation */
-  .playing {
-	position: absolute;
-	right: 5%;
-	top: 50%;
-	margin: -20px auto;
-	width: 50px;
-	height: 40px;
-	text-align: center;
-	font-size: 10px;
-	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-	display: none;
-  }
-  .playing > div {
-	background-color: #fff;
-	height: 100%;
-	width: 6px;
-	display: inline-block;
-	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-	-webkit-animation: wavy 1s ease infinite forwards;
-	animation: wavy 1s ease infinite forwards;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
-  }
-  .playing .rect2 {
-	-webkit-animation-delay: 0.25s;
-	animation-delay: 0.25s;
-  }
-  .playing .rect3 {
-	-webkit-animation-delay: 0.5s;
-	animation-delay: 0.5s;
-  }
-  .playing .rect4 {
-	-webkit-animation-delay: 0.75s;
-	animation-delay: 0.75s;
-  }
-  .playing .rect5 {
-	-webkit-animation-delay: 1.0s;
-	animation-delay: 1.0s;
-  }
-  @-webkit-keyframes wavy {
-	0% {
-	  -webkit-transform: scaleY(1);
-	  transform: scaleY(1);
-	}
-	50% {
-	  -webkit-transform: scaleY(0.6);
-	  transform: scaleY(0.6);
-	}
-	100% {
-	  -webkit-transform: scaleY(1);
-	  transform: scaleY(1);
-	}
-  }
-  @keyframes wavy {
-	0% {
-	  -webkit-transform: scaleY(1);
-	  transform: scaleY(1);
-	}
-	50% {
-	  -webkit-transform: scaleY(0.6);
-	  transform: scaleY(0.6);
-	}
-	100% {
-	  -webkit-transform: scaleY(1);
-	  transform: scaleY(1);
-	}
-  }
 
-  
+/* Stations */
+
+.padding {
+    width: 90%;
+    height: 2%;
+}
+
+.station {
+    position: relative;
+    width: 90%;
+    height: 8%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 5%;
+    cursor: pointer;
+    margin: 0px;
+    font-size: 3rem;
+}
+
+.station:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2vw;
+    font-weight: 300;
+    color: rgb(127, 186, 224);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+}
+
+.subtitle {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.live {
+    width: 8vw;
+    height: 3vw;
+    background-color: #cc1919;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.25vw;
+    line-height: 3vw;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+    text-shadow: none;
+}
+
+
+/* Playing Animation */
+
+.playing {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    margin: -20px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.playing>div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-animation: wavy 1s ease infinite forwards;
+    animation: wavy 1s ease infinite forwards;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+}
+
+.playing .rect2 {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+.playing .rect3 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.playing .rect4 {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+}
+
+.playing .rect5 {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+}
+
+@-webkit-keyframes wavy {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0.6);
+        transform: scaleY(0.6);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes wavy {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0.6);
+        transform: scaleY(0.6);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
