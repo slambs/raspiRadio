@@ -1,0 +1,7 @@
+
+* redirect to index.html after using the brightness button
+* change the design - maybe use bootstrap or something similar
+* merge js files
+* style.css
+
+* play media files from usb storage device

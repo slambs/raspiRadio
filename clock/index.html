@@ -5,10 +5,14 @@
     <title>Time and Temp</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="./jquery/jquery.js"></script>
-    <script src="script.js"></script>
+    <script src="tempAndTime.js"></script>
 </head>
 
-<body onload="getTime(); getTemp(); insideTempAndMoist();document.getElementById('timeFreeze').innerText = localStorage.getItem('timeStopValue');">
+
+<body onload="getTime(); 
+              getTemp(); 
+              insideTempAndMoist();
+              document.getElementById('timeFreeze').innerText = localStorage.getItem('timeStopValue');">
     <!-- top buttons  -->
     <header>
         <a href="index.html">clock</a>
