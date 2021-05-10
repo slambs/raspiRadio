@@ -21,7 +21,12 @@ app.get('/setBrightness/:value', (req, res) => {
     })
     .then(newBrightnessValue => {
       res.send(
-        `<h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
+        `
+         <script type="text/javascript">
+        setTimeout(() => {window.location.href = "./clock/index.html"}
+            , 3000);
+    </script>
+        <h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
       )
     })
     .then(() => {
@@ -42,6 +47,10 @@ app.get('/setBrightness/:value', (req, res) => {
         }
       })
     })
+})
+
+app.get('/close', (req, res) => {
+  res.send('<script>window.close();</script > ')
 })
 
 app.listen(port, () => {
