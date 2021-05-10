@@ -21,9 +21,9 @@ app.get('/setBrightness/:value', (req, res) => {
     })
     .then(newBrightnessValue => {
       res.send(
-        `<head>
-        <META http-equiv="refresh" content="2;URL=index.html"> 
-        </head> 
+        `  <script type="text/javascript">
+            setTimeout(()=>{window.location.href = "./index.html"}, 3000);
+           </script
         <h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
       )
     })
