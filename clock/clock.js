@@ -23,6 +23,8 @@ app.get('/setBrightness/:value', (req, res) => {
       res.send(
         `<h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
       )
+    })
+    .then(() => {
       res.redirect('/')
     })
     .catch(err => {
