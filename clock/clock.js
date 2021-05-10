@@ -22,7 +22,7 @@ app.get('/setBrightness/:value', (req, res) => {
     .then(newBrightnessValue => {
       res.send(
         `<head>
-        <META http-equiv="refresh" content="5;URL=/clock/index.html"> 
+        <META http-equiv="refresh" content="2;URL=index.html"> 
         </head> 
         <h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
       )
