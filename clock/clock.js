@@ -21,16 +21,8 @@ app.get('/setBrightness/:value', (req, res) => {
     })
     .then(newBrightnessValue => {
       res.send(
-        `
-         <script type="text/javascript">
-        setTimeout(() => {window.location.href = "./clock/index.html"}
-            , 3000);
-    </script>
-        <h1> Screen brightness is now: ${newBrightnessValue}<br><a href="index.html">Back to home page</a></h1>`
+        `<h1> Screen brightness is now: ${newBrightnessValue}<br><a href="/">Back to home page</a></h1>`
       )
-    })
-    .then(() => {
-      res.redirect('/')
     })
     .catch(err => {
       backlight.getMaxBrightness().then(maxBrightnessValue => {
